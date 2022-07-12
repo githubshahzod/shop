@@ -1,0 +1,14 @@
+{% extends "Questions & Answers.html" %}
+{% block body %}
+    <div class="container">
+        <div class="margin">
+            {% for question in question_list %}
+                <a href="{{ url_for('answer', question_id=question.id) }}">
+                <h4>question {{ question.question_text }}</h4>
+                <p>Asked by: {{ question.name }}</p>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+{% endblock %}

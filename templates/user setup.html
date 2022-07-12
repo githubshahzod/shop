@@ -1,0 +1,19 @@
+{% extends "Questions & Answers.html" %}
+{% block body %}
+    <div class="container">
+        <div class="margin">
+            <div class="h1">User Setup</div>
+            <div>Click to promote to expert</div>
+            <div class="box">
+                {% for employee in user_list %}
+                    <a href="{{ url_for('promote', user_id=employee.id) }}">
+                        <div class="inp1"{% if employee.expert %} style="background: black;color: white" {% endif %}>
+
+                            <h4 class="inp">{{ employee.name }}</h4>
+                        </div>
+                     </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

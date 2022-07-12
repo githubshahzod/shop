@@ -1,0 +1,23 @@
+{% extends "Questions & Answers.html" %}
+{% block container %}{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="margin">
+            <div class="h1">Login</div>
+            <p>{{ error }}</p>
+            <div class="box">
+                <form action="{{ url_for('login') }}" method="post">
+                    <div class="inp">
+                        <div class="txt">Name</div>
+                        <input type="text" placeholder="Name" name="name">
+                    </div>
+                    <div class="inp">
+                        <div class="txt">Password</div>
+                        <input type="password" placeholder="Password" name="password">
+                    </div>
+                    <button class="btn"><h4>Login</h4></button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

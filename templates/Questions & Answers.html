@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="menu">
+            <h1>Questions & Answers</h1>
+            <p><a href="{{ url_for("index") }}">Home</a></p>
+            {% if not user %}
+                <p><a href="{{ url_for("login") }}">login</a></p>
+                <p><a href="{{ url_for('register') }}">Register</a></p>
+            {% endif %}
+            {% if user and not user.admin and not user.expert %}
+                <p><a href="{{ url_for('ask_question') }}">Ask Questions</a></p>
+            {% endif %}
+            {% if user.expert %}
+                <p><a href="{{ url_for('answer') }}">Answer questions</a></p>
+            {% endif %}
+            {% if user.admin %}
+            <p><a href="{{ url_for('usersetup') }}">User Setup</a></p>
+            {% endif %}
+            {% if user %}
+                <p><a href="{{ url_for('logout') }}">Logout</a></p>
+            {% endif %}
+        </div>
+    </nav>
+</header>
+<section>
+    {% block body %}
+
+    {% endblock %}
+
+</section>
+</body>
+</html>

@@ -1,0 +1,4 @@
+venv
+.idea
+sqlite3.exe
+__pycache__

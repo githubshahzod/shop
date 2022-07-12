@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.menu{
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    margin-left: 254px;
+}
+header{
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+}
+header h1 {
+    color: white;
+}
+header p {
+    color: white;
+    font-size: 20px;
+}
+.inp{
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+}
+.txt{
+    color: white;
+    width: 200px;
+}
+section{
+    background-color: darkslategray;
+    height: 591px;
+}
+section .h1{
+    color: white;
+    font-size: 30px;
+}
+.box{
+    background-color: rgba(255, 255, 255, 0.31);
+    width: 1200px;
+    margin-top: 20px;
+}
+input{
+    width: 800px;
+    height: 40px;
+}
+.container{
+    margin-left: 60px;
+}
+.btn{
+    width: 100px;
+    height: 45px;
+    background-color: orangered;
+    text-align: center;
+    display: flex;
+    margin-top: 15px;
+    margin-left: 350px;
+}
+h4{
+    color: white;
+    margin-left: 29px;
+}
+.inp1{
+    background: orangered;
+    height: 50px;
+}
+.inp2{
+    background: cornflowerblue;
+    height: 50px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.btn1{
+    width: 500px;
+    height: 50px;
+    background: orangered;
+    margin-top: 10px;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li><a href="{{ url_for("index") }}">index</a></li>
+    <li><a href="{{ url_for("login") }}">login</a></li>
+</ul>
+<h1>index html</h1>
+{% if ism == "Begzod" %}
+<h1>Hello {{ ism }}</h1>
+{% elif ism == "Sardor" %}
+<h1>{{ ism }}</h1>
+{% else %}
+<h1>No name</h1>
+{% endif %}
+</body>
+</html>
